@@ -18,7 +18,7 @@ An example can be seen below:
 
 ## How to Run
 1. Have a local copy of the project.
-2. Change NASM location in the properties of *sliding_window.asm.* (Currently set to C:/nasm/nasm)
+2. Change NASM location in the properties of *sliding_window.asm.* (Currently set to *C:/nasm/nasm*)
 3. Run *main.c* with the selected configuration.
 
 ## Comparative Analysis
