@@ -31,6 +31,7 @@ In debug mode, the C function runs slower for the three array sizes than the ext
 |---------|-----------|-----------|-----------|
 | C       | 17.67     | 254.57    | 4047.63   |
 | SASM    | 2.77      | 42.30     | 605.53    |
+
 By using the percenatage change formula, SASM is faster than C by 84.32% for 2<sup>20</sup>, 83.38% for 2<sup>24</sup>, and 85.04% for 2<sup>28</sup>, with an average of 84.25%. Furthermore, the size of the input does not affect the speed of the function.
 ### Release mode
 ![Results for Release Mode](Results/Release.png)
@@ -39,6 +40,7 @@ In release mode, the C function runs faster than the external x86-64 function fo
 |---------|-----------|-----------|-----------|
 | C       | 2.57      | 45.47     | 641.00    |
 | SASM    | 2.67      | 48.80     | 648.80    |
+
 With the percentage change formula, SASM is slower than C by 3.89% for 2<sup>20</sup>, 7.32% for 2<sup>24</sup>, and 1.22% for 2<sup>28</sup>, with an average of 84.25%. Similarly with debug mode, the size of the input does not affect the speed of the function.
 ## Authors
 Jean Cabrera  
