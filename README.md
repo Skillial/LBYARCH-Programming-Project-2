@@ -37,7 +37,7 @@ By using the percenatage change formula, SASM is faster than C by 84.32% for 2<s
 In release mode, the C function runs faster than the external x86-64 function for all three input sizes. In release mode, the compiler removes all debugging information and fully optimizes C code. This can be seen [here](https://learn.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2022)
 |         | 2<sup>20</sup>      | 2<sup>24</sup>      | 2<sup>28</sup>   |
 |---------|-----------|-----------|-----------|
-| C       | 2.57      | 45.47     | 641.00   |
+| C       | 2.57      | 45.47     | 641.00    |
 | SASM    | 2.67      | 48.80     | 648.80    |
 With the percentage change formula, SASM is slower than C by 3.89% for 2<sup>20</sup>, 7.32% for 2<sup>24</sup>, and 1.22% for 2<sup>28</sup>, with an average of 84.25%. Similarly with debug mode, the size of the input does not affect the speed of the function.
 ## Authors
