@@ -26,15 +26,15 @@ To measure the execution time of these functions, a clock was used to record the
 
 ### Debug mode 
 ![Results for Debug Mode](Results/Debug.png)  
-In debug mode, the C function runs slower for the three array sizes than the external x86-64 function. This should be the expected result, as assembly is a low-level language and does not go through the same level of abstraction. Code written in assembly is directly mapped to machine language executable by the CPU. More of its advantages can be seen [here](https://www.spiceworks.com/tech/tech-general/articles/what-is-assembly-language/).
+In debug mode, the C function runs slower for the three array sizes than the external x86-64 function. Theoretically, this should be the expected result, as assembly is a low-level language and does not go through the same level of abstraction. Code written in assembly is directly mapped to machine language executable by the CPU. More of its advantages can be seen [here](https://www.spiceworks.com/tech/tech-general/articles/what-is-assembly-language/).
 |         | 2<sup>20</sup>    | 2<sup>24</sup>   | 2<sup>28</sup>    |
 |---------|-----------|-----------|-----------|
 | C       | 17.67     | 254.57    | 4047.63   |
 | Sasm    | 2.77      | 42.30     | 605.53    |
 ### Release mode
-By using the
+By using the percenatage change formula, SASM is faster than C by 84.32% for 2<sup>20</sup>, 83.38% for 2<sup>24</sup>, and 85.04% for 2<sup>28</sup>, with an average of 84.25%. Furthermore, the size of the input does not affect the speed of the function.
 ![Results for Release Mode](Results/Release.png)
-In relese mode, the
+In release mode, the C function runs faster than the external x86-64 function for all thre input sizes. The release mode removes all debugging information and fully optimizes the code. This can be seen [here](https://learn.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2022)
 |         | 2<sup>20</sup>      | 2<sup>24</sup>      | 2<sup>28</sup>   |
 |---------|-----------|-----------|-----------|
 | C       | 2.57      | 45.47     | 641.00   |
