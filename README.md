@@ -21,5 +21,5 @@ An example can be seen below:
 3. Run *main.c* with th selected configuration.
 ## Comparative Analysis
 ## Authors
-Jean Cabrera
+Jean Cabrera <br>
 Bentley Lu
