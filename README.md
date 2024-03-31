@@ -1,7 +1,7 @@
 # LBYARCH Programming Project 2
 ## About the Project
 ### Description
-This project aims to compare and analyze the execution time of C and x86-64 assembly in both debug and release mode. For this purpose, a short program was created to calculate the sum of every seven elements (single-precision float) in an array, and these results are then stored in a separate array. <br>
+This project aims to compare and analyze the execution time of a C function and an external function implemented in x86-64 assembly in both debug and release mode. For this purpose, a short program was created in Visual Studio 2022 to calculate the sum of every seven elements in an array, and these results are then stored in a separate array. These elements are single-precision floats that are initialized with the same random value every time the program runs. <br>
 The program follows this format: <br>
 ### Y[i] = X[i-3] + X[i-2] + X[i-1] + X[i] + X[i+1] + X[i+2] + X[i+3]
 
@@ -13,13 +13,16 @@ An example can be seen below:
 1. Initialize the size and values of the array
 2. Fill the cache
 3. Call the function 30 times
-4. Calculate the average time per call/ total tim
+4. Calculate the average time per call/ total time
 5. Repeat steps 2-4 (for SASM)
 ## How to Run
 1. Have a local copy of the project.
-2. Change NASM location in the properies of *sliding_window.asm.* (Currently in C:/nasm/nasm)
+2. Change NASM location in the properies of *sliding_window.asm.* (Currently set to C:/nasm/nasm)
 3. Run *main.c* with th selected configuration.
 ## Comparative Analysis
+To measure the execution time of these functions, a clock was used to record the time before the function call and right after the function call. The difference between these times was then calculated to determine the duration of each function call. Furthermore, it was repeated three times with an array size of 2<sup>20</sup>, 2<sup>24</sup>, 2<sup>28</sup> for both release and debug mode. <br> <br>
+
+### Debug mode 
 ## Authors
 Jean Cabrera <br>
 Bentley Lu
