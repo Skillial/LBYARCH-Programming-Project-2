@@ -23,7 +23,7 @@ An example can be seen below:
 To measure the execution time of these functions, a clock was used to record the time before the function call and right after the function call. The difference between these times was then calculated to determine the duration of each function call. Furthermore, it was repeated three times with an array size of 2<sup>20</sup>, 2<sup>24</sup>, 2<sup>28</sup> for both release and debug mode. <br> 
 
 ### Debug mode 
-<img src="results/debug.png" alt="Debug_Config" width="700"/> 
+<img src="Results/Debug.png" alt="Results for Debug Mode"/> 
 ## Authors
 Jean Cabrera <br>
 Bentley Lu
