@@ -28,6 +28,7 @@ In debug mode, the C function runs faster for the three array sizes than the ext
 
 
 
+
 132222213
 ### Release mode
 <img src="Results/Release.png" alt="Results for Release Mode"/> 
