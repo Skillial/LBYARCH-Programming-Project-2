@@ -21,7 +21,10 @@ An example can be seen below:
 2. Change NASM location in the properties of *sliding_window.asm.* (Currently set to *C:/nasm/nasm*)
 3. Run *main.c* with the selected configuration.
 
-## Comparative Analysis
+
+## Analysis
+To verify whether the function performs the same task, the results of both assembly and C are printed simultaneously. This can be observed in the two images below.
+
 To measure the execution time of these functions, a clock was used to record the time before the function call and right after the function call. The difference between these times was then calculated to determine the duration of each function call. Furthermore, it was repeated three times with an array size of 2<sup>20</sup>, 2<sup>24</sup>, 2<sup>28</sup> for both release and debug mode.
 
 ### Debug mode 
