@@ -16,7 +16,9 @@ An example can be seen below:
 4. Calculate the average time per call/ total tim
 5. Repeat steps 2-4 (for SASM)
 ## How to Run
-
+1. Have a local copy of the project.
+2. Change NASM location in the properies of *sliding_window.asm.* (Currently in C:/nasm/nasm)
+3. Run *main.c* with th selected configuration.
 ## Comparative Analysis
 ## Authors
 Jean Cabrera
