@@ -50,7 +50,7 @@ int main() {
 
 	// size declaration
 	size_t INPUT_BYTES, ANSWER_SIZE, ANSWER_BYTES;
-	size_t INPUT_SIZE[] = { 1 << 20, 1 << 24, 1 << 28 };
+	size_t INPUT_SIZE[] = { 1 << 20, 1 << 24, 1 << 28 }; // n (Vector Size)
 
 	for (int k = 0; k < 3; k++) {
 		INPUT_BYTES = INPUT_SIZE[k] * sizeof(float);
@@ -59,7 +59,7 @@ int main() {
 
 		// array initializatin
 		input = (float*)malloc(INPUT_BYTES);
-		answer = (float*)malloc(ANSWER_BYTES);
+		answer = (float*)malloc(INPUT_BYTES);
 
 		// initilization of array elements to 1
 		for (int i = 0; i < INPUT_SIZE[k]; i++) {
@@ -74,7 +74,7 @@ int main() {
 		// fill the cache
 		slidingWindow(input, answer, INPUT_SIZE[k]);
 		free(answer);
-		answer = (float*)malloc(ANSWER_BYTES);
+		answer = (float*)malloc(INPUT_BYTES);
 
 
 		timeTaken = 0;
@@ -98,7 +98,7 @@ int main() {
 		// Refresh answer array
 		free(answer);
 
-		answer = (float*)malloc(ANSWER_BYTES);
+		answer = (float*)malloc(INPUT_BYTES);
 
 
 		// sasm
@@ -106,7 +106,7 @@ int main() {
 		// fill the cache
 		slidingWindowx64(input, answer, INPUT_SIZE[k]);
 		free(answer);
-		answer = (float*)malloc(ANSWER_BYTES);
+		answer = (float*)malloc(INPUT_BYTES);
 
 
 		timeTaken = 0;
