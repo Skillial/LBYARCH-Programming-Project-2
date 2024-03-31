@@ -8,6 +8,11 @@ An example can be seen below:
 ### Input: X-> 1, 2, 3, 4, 5, 6, 7, 8
 ### Output: Y-> 28, 35
 ### Steps Followed
+1. Initialize the size and values of the array
+2. Fill the cache
+3. Call the function 30 times
+4. Calculate the average time per call/ total tim
+5. Repeat steps 2-4 (for SASM)
 ## How to Run
 
 ## Comparative Analysis
