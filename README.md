@@ -23,7 +23,7 @@ An example can be seen below:
 
 
 ## Analysis
-To verify whether the function performs the same task, the results of both assembly and C are printed simultaneously. This can be observed in the two images below.
+To verify whether the function performs the same task, the results of both assembly and C are printed simultaneously, showing that they produce the same results. This can be observed in the two images below.
 
 To measure the execution time of these functions, a clock was used to record the time before the function call and right after the function call. The difference between these times was then calculated to determine the duration of each function call. Furthermore, it was repeated three times with an array size of 2<sup>20</sup>, 2<sup>24</sup>, 2<sup>28</sup> for both release and debug mode.
 
@@ -38,13 +38,15 @@ In debug mode, the C function runs slower for the three array sizes than the ext
 By using the percenatage change formula, SASM is faster than C by 84.32% for 2<sup>20</sup>, 83.38% for 2<sup>24</sup>, and 85.04% for 2<sup>28</sup>, with an average of 84.25%. Furthermore, the size of the input does not affect the speed of the function.
 ### Release mode
 ![Results for Release Mode](Results/Release.png)
-In release mode, the C function runs faster than the external x86-64 function for all three input sizes. In release mode, the compiler removes all debugging information and fully optimizes C code. This can be seen [here](https://learn.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2022)
+In release mode, the C function runs faster than the external x86-64 function for all three input sizes. In release mode, the compiler removes all debugging information and fully optimizes the code. This can be seen [here](https://learn.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2022)
 |         | 2<sup>20</sup>      | 2<sup>24</sup>      | 2<sup>28</sup>   |
 |---------|-----------|-----------|-----------|
 | C       | 2.57      | 45.47     | 641.00    |
 | SASM    | 2.67      | 48.80     | 648.80    |
 
 With the percentage change formula, SASM is slower than C by 3.89% for 2<sup>20</sup>, 7.32% for 2<sup>24</sup>, and 1.22% for 2<sup>28</sup>, with an average of 84.25%. Similarly with debug mode, the size of the input does not affect the speed of the function.
+
+Overall, code written in assembly runs faster in debug mode, but in release mode, where optimization comes into play, assembly runs slower.
 ## Authors
 Jean Cabrera  
 Bentley Lu
