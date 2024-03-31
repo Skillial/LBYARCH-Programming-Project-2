@@ -27,6 +27,10 @@ To measure the execution time of these functions, a clock was used to record the
 ### Debug mode 
 ![Results for Debug Mode](Results/Debug.png)  
 In debug mode, the C function runs faster for the three array sizes than the external x86-64 function. This should be the expected result, as assembly is a low-level language and does not go through the same level of abstraction. Code written in assembly is directly mapped to machine language executable by the CPU. More of its advantages can be seen [here](https://www.spiceworks.com/tech/tech-general/articles/what-is-assembly-language/).
+|         | 2^20      | 2^24      | 2^28      |
+|---------|-----------|-----------|-----------|
+| C       | 17.67     | 254.57    | 4047.63   |
+| Sasm    | 2.77      | 42.30     | 605.53    |
 
 ### Release mode
 ![Results for Release Mode](Results/Release.png)
